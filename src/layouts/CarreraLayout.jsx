@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet, useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavBar";
 import SubNavbar from "../components/SubNavbar";
 
 const CarreraLayout = () => {
