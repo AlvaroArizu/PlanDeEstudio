@@ -1,0 +1,47 @@
+/* Estilos para el Navbar */
+nav {
+    background-color: #1e40af; /* Azul oscuro */
+    padding: 1rem; /* Espaciado interno */
+  }
+
+  .navbar {
+    position: relative; /* Asegurarse de que se pueda aplicar z-index */
+    z-index: 10; /* Priorizar la visibilidad del Navbar */
+  }
+  
+  
+  nav ul {
+    display: flex; /* Flexbox para alinear los elementos */
+    gap: 1rem; /* Espacio entre los enlaces */
+    list-style: none; /* Eliminar los puntos de lista */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    text-transform: uppercase; /* Texto en mayúsculas */
+  }
+  
+  nav a {
+    color: white; /* Color de texto blanco */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+  }
+  
+  nav a:hover {
+    color: #fbbf24; /* Color dorado al pasar el ratón */
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column; /* Apilar elementos verticalmente */
+      gap: 0.5rem; /* Reducir el espacio entre elementos */
+      align-items: center; /* Centrar los enlaces */
+    }
+  
+    nav {
+      text-align: center; /* Asegurar alineación en el centro */
+    }
+  }
+  

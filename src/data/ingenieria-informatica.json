@@ -1,0 +1,386 @@
+{
+    "primerAnio": [
+      {
+        "codigo": 3306,
+        "asignatura": "Fundamentos de Matemática",
+        "duracion": "CU1",
+        "horas": 4,
+        "correlativas": []
+      },
+      {
+        "codigo": 3307,
+        "asignatura": "Estructuras Discretas para Computación",
+        "duracion": "CU1",
+        "horas": 4,
+        "correlativas": []
+      },
+      {
+        "codigo": 3308,
+        "asignatura": "Organización de Empresas",
+        "duracion": "CU1",
+        "horas": 4,
+        "correlativas": []
+      },
+      {
+        "codigo": 3361,
+        "asignatura": "Programación I",
+        "duracion": "CU1",
+        "horas": 5,
+        "correlativas": []
+      },
+      {
+        "codigo": 3363,
+        "asignatura": "Física I",
+        "duracion": "CU1",
+        "horas": 4,
+        "correlativas": []
+      },
+      {
+        "codigo": 3317,
+        "asignatura": "Álgebra Lineal",
+        "duracion": "CU2",
+        "horas": 6,
+        "correlativas": []
+      },
+      {
+        "codigo": 3309,
+        "asignatura": "Conducta Ética y Profesional",
+        "duracion": "CU2",
+        "horas": 2,
+        "correlativas": []
+      },
+      {
+        "codigo": 3312,
+        "asignatura": "Teoría General de Sistemas",
+        "duracion": "CU2",
+        "horas": 2,
+        "correlativas": []
+      },
+      {
+        "codigo": 3310,
+        "asignatura": "Análisis Matemático I",
+        "duracion": "CU2",
+        "horas": 6,
+        "correlativas": ["3306(R)"]
+      },
+      {
+        "codigo": 3362,
+        "asignatura": "Programación II",
+        "duracion": "CU2",
+        "horas": 6,
+        "correlativas": ["3361(R)"]
+      }
+    ],
+    "segundoAnio": [
+      {
+        "codigo": 3314,
+        "asignatura": "Análisis Matemático II",
+        "duracion": "CU1",
+        "horas": 6,
+        "correlativas": ["3310(R)"]
+      },
+      {
+        "codigo": 3332,
+        "asignatura": "Ingeniería de Requerimientos",
+        "duracion": "CU1",
+        "horas": 6,
+        "correlativas": ["3312(R)"]
+      },
+      {
+        "codigo": 3364,
+        "asignatura": "Programación III",
+        "duracion": "CU1",
+        "horas": 6,
+        "correlativas": ["3362(R)"]
+      },
+      {
+        "codigo": 3366,
+        "asignatura": "Probabilidad y Estadística",
+        "duracion": "CU1",
+        "horas": 4,
+        "correlativas": ["3310(R)"]
+      },
+      {
+        "codigo": 3315,
+        "asignatura": "Circuitos y Sistemas Digitales",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["3306(R)", "3307(R)"]
+      },
+      {
+        "codigo": 3316,
+        "asignatura": "Análisis de Sistemas de Información",
+        "duracion": "CU2",
+        "horas": 5,
+        "correlativas": ["3332(R)"]
+      },
+      {
+        "codigo": 3328,
+        "asignatura": "Diseño y Administración de Base de Datos",
+        "duracion": "CU2",
+        "horas": 5,
+        "correlativas": ["3364(R)"]
+      },
+      {
+        "codigo": 3365,
+        "asignatura": "Programación IV",
+        "duracion": "CU2",
+        "horas": 6,
+        "correlativas": ["3364(R)"]
+      },
+      {
+        "codigo": 3354,
+        "asignatura": "Física II",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["3363(R)"]
+      }
+    ],
+    "tercerAnio": [
+      {
+        "codigo": 3319,
+        "asignatura": "Lenguajes Formales y Autómatas",
+        "duracion": "CU1",
+        "horas": 3,
+        "correlativas": ["3365(R)"]
+      },
+      {
+        "codigo": 3329,
+        "asignatura": "Metodología de la Investigación",
+        "duracion": "CU1",
+        "horas": 3,
+        "correlativas": ["15 Asig. Reg.", "3332(R)", "3364(R)"]
+      },
+      {
+        "codigo": 3331,
+        "asignatura": "Sistemas de Base de Datos",
+        "duracion": "CU1",
+        "horas": 4,
+        "correlativas": ["3328(R)"]
+      },
+      {
+        "codigo": 3324,
+        "asignatura": "Diseño de Aplicaciones",
+        "duracion": "CU1",
+        "horas": 6,
+        "correlativas": ["3316(R)", "3328(R)"]
+      },
+      {
+        "codigo": 3367,
+        "asignatura": "Arquitectura del Computador",
+        "duracion": "CU1",
+        "horas": 6,
+        "correlativas": ["3315(R)"]
+      },
+      {
+        "codigo": 3355,
+        "asignatura": "Análisis Matemático III",
+        "duracion": "CU1",
+        "horas": 4,
+        "correlativas": ["3314(R)"]
+      },
+      {
+        "codigo": 3321,
+        "asignatura": "Sistemas Operativos",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["3364(R)", "3367(A)"]
+      },
+      {
+        "codigo": 3322,
+        "asignatura": "Teleinformática",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["3367(R)"]
+      },
+      {
+        "codigo": 3325,
+        "asignatura": "Algoritmia",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["3365(R)"]
+      },
+      {
+        "codigo": 3327,
+        "asignatura": "Herramientas y Procesos de Software",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["3316(R)", "3324(R)"]
+      },
+      {
+        "codigo": 3356,
+        "asignatura": "Química",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["3306(R)"]
+      },
+      {
+        "codigo": 3334,
+        "asignatura": "Trabajo de Campo",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["20 Asig. Reg.", "3324(R)", "3331(R)", "3365(R)"]
+      }
+    ],
+    "cuartoAnio": [
+      {
+        "codigo": 3330,
+        "asignatura": "Implementación y Actualización de Software",
+        "duracion": "CU1",
+        "horas": 3,
+        "correlativas": ["3327(R)"]
+      },
+      {
+        "codigo": 3374,
+        "asignatura": "Física III",
+        "duracion": "CU1",
+        "horas": 3,
+        "correlativas": ["3354(R)"]
+      },
+      {
+        "codigo": 3335,
+        "asignatura": "Electiva de Programación",
+        "duracion": "CU1",
+        "horas": 4,
+        "correlativas": ["3365(R)"]
+      },
+      {
+        "codigo": 3345,
+        "asignatura": "Sistemas Operativos Distribuidos",
+        "duracion": "CU1",
+        "horas": 6,
+        "correlativas": ["3321(R)"]
+      },
+      {
+        "codigo": 3337,
+        "asignatura": "Redes de Computadoras",
+        "duracion": "CU1",
+        "horas": 6,
+        "correlativas": ["3322(R)"]
+      },
+      {
+        "codigo": 3343,
+        "asignatura": "Derecho Informático",
+        "duracion": "CU1",
+        "horas": 2,
+        "correlativas": ["3309(R)", "3329(R)"]
+      },
+      {
+        "codigo": 3339,
+        "asignatura": "Ingeniería del Conocimiento",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["3316(R)", "3325(R)", "3331(R)"]
+      },
+      {
+        "codigo": 3346,
+        "asignatura": "Sistemas Emergentes para la Transmisión de Datos",
+        "duracion": "CU2",
+        "horas": 6,
+        "correlativas": ["3337(R)"]
+      },
+      {
+        "codigo": 3340,
+        "asignatura": "Sistema de Información de la Empresa",
+        "duracion": "CU2",
+        "horas": 6,
+        "correlativas": ["3308(R)", "3330(R)"]
+      },
+      {
+        "codigo": 3338,
+        "asignatura": "Electrónica",
+        "duracion": "CU2",
+        "horas": 6,
+        "correlativas": ["3354(R)"]
+      },
+      {
+        "codigo": 3352,
+        "asignatura": "Administración de Proyectos Informáticos",
+        "duracion": "CU2",
+        "horas": 3,
+        "correlativas": ["3327(R)"]
+      }
+    ],
+    "quintoAnio": [
+      {
+        "codigo": 3344,
+        "asignatura": "Auditoría y Seguridad de Sistemas de Información",
+        "duracion": "CU1",
+        "horas": 6,
+        "correlativas": ["3322(R)", "3340(R)"]
+      },
+      {
+        "codigo": 3347,
+        "asignatura": "Sistemas de Información Multimedial",
+        "duracion": "CU1",
+        "horas": 6,
+        "correlativas": ["3340(R)"]
+      },
+      {
+        "codigo": 3348,
+        "asignatura": "Modelos y Simulación",
+        "duracion": "CU1",
+        "horas": 6,
+        "correlativas": ["3343(R)", "3366(R)"]
+      },
+      {
+        "codigo": 3349,
+        "asignatura": "Electiva General",
+        "duracion": "CU2",
+        "horas": 3,
+        "correlativas": ["3335(R)"]
+      },
+      {
+        "codigo": 3351,
+        "asignatura": "Sistemas Inteligentes",
+        "duracion": "CU2",
+        "horas": 5,
+        "correlativas": ["3339(R)"]
+      },
+      {
+        "codigo": 3376,
+        "asignatura": "Informática Aplicada",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["3348(R)", "3356(R)", "3374(R)"]
+      },
+      {
+        "codigo": 3375,
+        "asignatura": "Tesis de Grado - Proyecto Final Integrador",
+        "duracion": "AN",
+        "horas": 6,
+        "correlativas": [
+          "3330(A)", "3335(A)", "3337(A)", "3338(A)", "3339(A)", "3340(A)",
+          "3343(A)", "3345(A)", "3346(A)", "3352(A)", "3374(A)"
+        ]
+      },
+      {
+        "codigo": 3357,
+        "asignatura": "Práctica Profesional Supervisada",
+        "duracion": "AN",
+        "horas": 0,
+        "correlativas": [
+          "3330(R)", "3335(R)", "3337(R)", "3338(R)", "3339(R)", "3340(R)",
+          "3343(R)", "3345(R)", "3346(R)", "3352(R)", "3374(R)"
+        ]
+      }
+    ],
+    "idiomas": [
+      {
+        "codigo": 3372,
+        "asignatura": "Inglés I",
+        "duracion": "CU1",
+        "horas": 4,
+        "correlativas": []
+      },
+      {
+        "codigo": 3373,
+        "asignatura": "Inglés II",
+        "duracion": "CU2",
+        "horas": 4,
+        "correlativas": ["3372(R)"]
+      }
+    ]
+  }
+  
+  
