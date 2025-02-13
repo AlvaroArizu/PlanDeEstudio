@@ -5,7 +5,8 @@ import "../assets/styles/Home.css";
 const Home = () => {
   const carreras = [
     { nombre: "Ingeniería en Informática", ruta: "ingenieria-informatica" },
-    { nombre: "Licenciatura en Sistemas", ruta: "licenciatura-sistemas" }
+    { nombre: "Licenciatura en Sistemas", ruta: "licenciatura-sistemas" },
+    { nombre: "Ingeniería Civil", ruta: "ingenieria-civil" }
   ];
 
   return (

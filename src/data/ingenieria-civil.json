@@ -1,0 +1,51 @@
+{
+    "primerAnio": [
+      { "codigo": 400, "asignatura": "Análisis Matemático I", "duracion": "CU", "horas": 9, "correlativas": [] },
+      { "codigo": 401, "asignatura": "Álgebra Lineal", "duracion": "CU", "horas": 9, "correlativas": [] },
+      { "codigo": 402, "asignatura": "Física I", "duracion": "CU", "horas": 9, "correlativas": ["400(R)"] },
+      { "codigo": 404, "asignatura": "Lógica", "duracion": "CU", "horas": 3, "correlativas": [] },
+      { "codigo": 405, "asignatura": "Dibujo", "duracion": "CU", "horas": 6, "correlativas": [] },
+      { "codigo": 90001, "asignatura": "Informática I", "duracion": "CU", "horas": 3, "correlativas": [] },
+      { "codigo": 90002, "asignatura": "Inglés I", "duracion": "CU", "horas": 4, "correlativas": [] }
+    ],
+    "segundoAnio": [
+      { "codigo": 406, "asignatura": "Análisis Matemático II", "duracion": "CU", "horas": 9, "correlativas": ["400(R)"] },
+      { "codigo": 407, "asignatura": "Física II", "duracion": "CU", "horas": 9, "correlativas": ["402(R)", "406(R)"] },
+      { "codigo": 408, "asignatura": "Geometría Analítica", "duracion": "CU", "horas": 6, "correlativas": ["400(R)", "401(R)", "405(R)"] },
+      { "codigo": 409, "asignatura": "Historia de la Ciencia", "duracion": "CU", "horas": 3, "correlativas": ["404(R)"] },
+      { "codigo": 410, "asignatura": "Ecología y Control Ambiental", "duracion": "CU", "horas": 3, "correlativas": ["402(R)"] },
+      { "codigo": 411, "asignatura": "Química General", "duracion": "CU", "horas": 5, "correlativas": ["402(R)"] },
+      { "codigo": 412, "asignatura": "Economía y Financiación de Empresas", "duracion": "CU", "horas": 4, "correlativas": ["400(R)", "401(R)"] },
+      { "codigo": 800, "asignatura": "Algoritmos y Cálculo Numérico", "duracion": "CU", "horas": 4, "correlativas": ["400(A)", "401(R)", "406(R)", "90001(R)"] }
+    ],
+    "tercerAnio": [
+      { "codigo": 59, "asignatura": "Topografía y Geodesia", "duracion": "AN", "horas": 3, "correlativas": ["405(A)", "408(R)"] },
+      { "codigo": 114, "asignatura": "Geología", "duracion": "CU", "horas": 3, "correlativas": ["411(R)"] },
+      { "codigo": 430, "asignatura": "Estabilidad I", "duracion": "CU", "horas": 8, "correlativas": ["401(R)", "402(A)"] },
+      { "codigo": 431, "asignatura": "Tecnología de los Materiales", "duracion": "AN", "horas": 5, "correlativas": ["402(A)", "411(R)"] },
+      { "codigo": 434, "asignatura": "Termodinámica y Máquinas Térmicas", "duracion": "CU", "horas": 4, "correlativas": ["407(R)", "411(R)"] },
+      { "codigo": 435, "asignatura": "Estabilidad II", "duracion": "CU", "horas": 7, "correlativas": ["406(R)", "430(R)", "800(R)"] },
+      { "codigo": 458, "asignatura": "Mecánica Racional", "duracion": "CU", "horas": 4, "correlativas": ["401(A)", "407(R)"] },
+      { "codigo": 711, "asignatura": "Probabilidad y Estadística", "duracion": "CU", "horas": 4, "correlativas": ["406(R)"] }
+    ],
+    "cuartoAnio": [
+      { "codigo": 801, "asignatura": "Física Moderna", "duracion": "CU", "horas": 3, "correlativas": ["407(A)", "409(R)", "458(R)", "711(R)"] },
+      { "codigo": 61, "asignatura": "Construcciones I", "duracion": "AN", "horas": 3, "correlativas": ["59(R)", "412(R)", "431(R)"] },
+      { "codigo": 125, "asignatura": "Geotecnia", "duracion": "AN", "horas": 4, "correlativas": ["114(R)", "435(R)"] },
+      { "codigo": 437, "asignatura": "Hidráulica", "duracion": "CU", "horas": 5, "correlativas": ["406(A)", "458(R)"] }
+    ],
+    "quintoAnio": [
+      { "codigo": 65, "asignatura": "Vías de Comunicación", "duracion": "AN", "horas": 5, "correlativas": ["59(A)", "125(R)", "431(A)", "437(R)"] },
+      { "codigo": 67, "asignatura": "Construcciones II", "duracion": "AN", "horas": 3, "correlativas": ["61(R)", "434(A)", "442(R)", "469(A)"] },
+      { "codigo": 129, "asignatura": "Ingeniería Legal y Ejercicio Profesional", "duracion": "CU", "horas": 3, "correlativas": ["61(R)"] },
+      { "codigo": 444, "asignatura": "Organización de Obras", "duracion": "CU", "horas": 5, "correlativas": ["61(R)", "439(R)"] },
+      { "codigo": 445, "asignatura": "Hormigón II", "duracion": "CU", "horas": 8, "correlativas": ["438(A)", "440(R)"] },
+      { "codigo": 450, "asignatura": "Trabajo Final: Proyecto Integrador", "duracion": "AN", "horas": 3, "correlativas": ["125(R)", "440(R)", "441(R)", "442(R)", "443(R)"] }
+    ],
+    "practicas": [
+      { "codigo": 892, "asignatura": "Práctica Profesional Supervisada (1)", "duracion": "CU", "horas": 0, "correlativas": ["25 Asig. Reg."] },
+      { "codigo": 893, "asignatura": "Práctica Profesional Supervisada (2)", "duracion": "CU", "horas": 0, "correlativas": [] }
+    ],
+    "titulo": "Ingeniero Civil"
+  }
+  

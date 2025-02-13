@@ -347,7 +347,7 @@
       {
         "codigo": 3375,
         "asignatura": "Tesis de Grado - Proyecto Final Integrador",
-        "duracion": "AN",
+        "duracion": "CU1",
         "horas": 6,
         "correlativas": [
           "3330(A)", "3335(A)", "3337(A)", "3338(A)", "3339(A)", "3340(A)",
@@ -357,7 +357,7 @@
       {
         "codigo": 3357,
         "asignatura": "Práctica Profesional Supervisada",
-        "duracion": "AN",
+        "duracion": "CU1",
         "horas": 0,
         "correlativas": [
           "3330(R)", "3335(R)", "3337(R)", "3338(R)", "3339(R)", "3340(R)",

@@ -4,17 +4,16 @@ import { Network } from "vis-network";
 import Modal from "react-modal";
 import "../assets/styles/global.css";
 
-Modal.setAppElement("#root"); // Evita errores de accesibilidad con React Modal
+Modal.setAppElement("#root");
 
 const DiagramNodos = () => {
-  const { carrera } = useParams(); // Obtiene la carrera seleccionada desde la URL
+  const { carrera } = useParams();
   const networkContainer = useRef(null);
   const modalNetworkContainer = useRef(null);
   const [planDeEstudio, setPlanDeEstudio] = useState(null);
   const [selectedMateria, setSelectedMateria] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
 
-  // Cargar el plan de estudio dinámicamente según la carrera seleccionada
   useEffect(() => {
     import(`../data/${carrera}.json`)
       .then((data) => setPlanDeEstudio(data.default))
@@ -27,15 +26,22 @@ const DiagramNodos = () => {
     const nodes = [];
     const edges = [];
 
-    // Generar nodos y aristas
     Object.entries(planDeEstudio).forEach(([anio, materias]) => {
+      if (!Array.isArray(materias)) return; // Evitar errores si materias no es un array
+
       materias.forEach((materia) => {
+        let colorFondo = "#D2E5FF"; // Default
+        if (materia.duracion === "CU1") colorFondo = "#A0C4FF"; // Primer Cuatrimestre
+        else if (materia.duracion === "CU2") colorFondo = "#FFA07A"; // Segundo Cuatrimestre
+        else if (materia.duracion === "CU") colorFondo = "#FFD700"; // Cursada Única
+        else if (materia.duracion === "AN") colorFondo = "#90EE90"; // Anual
+
         nodes.push({
           id: materia.codigo,
-          label: `${materia.codigo}\n${materia.asignatura}\nAño: ${formatYear(anio)}, ${materia.duracion}`,
+          label: `${materia.codigo}\n${materia.asignatura}\n${formatYear(anio)} - ${materia.duracion}`,
           shape: "box",
           color: {
-            background: "#D2E5FF",
+            background: colorFondo,
             border: "#2B7CE9",
             highlight: { background: "#FFD700", border: "#FF5733" }
           },
@@ -44,12 +50,19 @@ const DiagramNodos = () => {
           anio
         });
 
-        // Agregar correlativas como conexiones en el grafo
         materia.correlativas.forEach((correlativa) => {
-          const correlativaCode = parseInt(correlativa.match(/\d+/)?.[0], 10);
-          if (correlativaCode) {
+          // Extraer solo los números, eliminando (A), (R) y caracteres no numéricos
+          const correlativaCode = correlativa.replace(/\D/g, "").trim(); 
+
+          // Verificar si realmente existe la materia en el plan de estudios
+          const correlativaExiste = Object.values(planDeEstudio)
+            .filter(materias => Array.isArray(materias)) // Asegurar solo listas de materias
+            .flat()
+            .some((m) => m.codigo.toString() === correlativaCode);
+
+          if (correlativaCode && correlativaExiste) {
             edges.push({
-              from: correlativaCode,
+              from: parseInt(correlativaCode, 10),
               to: materia.codigo,
               color: { color: "#FF5733" },
               arrows: { to: { enabled: true, scaleFactor: 1.2 } },
@@ -72,10 +85,7 @@ const DiagramNodos = () => {
           springLength: 200,
           springConstant: 0.08
         },
-        stabilization: {
-          enabled: true,
-          iterations: 2000
-        }
+        stabilization: { enabled: true, iterations: 2000 }
       },
       interaction: {
         zoomView: true,
@@ -87,7 +97,6 @@ const DiagramNodos = () => {
 
     const network = new Network(networkContainer.current, data, options);
 
-    // Evento para abrir modal al seleccionar un nodo
     network.on("click", (params) => {
       if (params.nodes.length > 0) {
         const nodeId = params.nodes[0];
@@ -101,11 +110,10 @@ const DiagramNodos = () => {
     return () => network.destroy();
   }, [planDeEstudio]);
 
-  // Generar diagrama reducido dentro del modal
+
   const generateMiniFlow = (codigo, allNodes, allEdges) => {
     const relatedEdges = allEdges.filter((edge) => edge.from === codigo || edge.to === codigo);
     const relatedNodesIds = [...new Set(relatedEdges.flatMap((edge) => [edge.from, edge.to]))];
-
     const filteredNodes = allNodes.filter((node) => relatedNodesIds.includes(node.id));
 
     const selectedMateria = filteredNodes.find((node) => node.id === codigo);
@@ -137,7 +145,6 @@ const DiagramNodos = () => {
     }, 100);
   };
 
-  // Función para formatear correctamente los nombres de los años
   const formatYear = (anioStr) => {
     const mapping = {
       primerAnio: "Primer Año",
@@ -149,7 +156,6 @@ const DiagramNodos = () => {
     return mapping[anioStr] || anioStr;
   };
 
-  // Función auxiliar para extraer el número del año (Ej: "tercerAnio" -> 3)
   const extractYear = (anioStr) => {
     const yearMapping = {
       primerAnio: 1,
@@ -177,12 +183,8 @@ const DiagramNodos = () => {
         {selectedMateria && (
           <>
             <h3>Detalle de Asignatura</h3>
-            <p>
-              <strong>Código:</strong> {selectedMateria.id}
-            </p>
-            <p>
-              <strong>Asignatura:</strong> {selectedMateria.label}
-            </p>
+            <p><strong>Código:</strong> {selectedMateria.id}</p>
+            <p><strong>Asignatura:</strong> {selectedMateria.label}</p>
             <div
               id="mini-flow"
               ref={modalNetworkContainer}

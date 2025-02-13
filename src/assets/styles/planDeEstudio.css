@@ -104,18 +104,31 @@
     font-size: 1rem;
     margin-bottom: 10px;
 }
+.correlativas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las correlativas pasen a una nueva línea si es necesario */
+    gap: 5px; /* Espaciado entre correlativas */
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
 .correlativa-link {
     color: #0056b3;
     cursor: pointer;
     text-decoration: underline;
-    margin-right: 5px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background-color: #e9f5ff;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .correlativa-link:hover {
-    color: #003580;
+    background-color: #0056b3;
+    color: white;
 }
 
-/* Estilos del modal */
+
+/* Estilos del modal mejorado */
 .modal {
     display: flex;
     position: fixed;
@@ -123,27 +136,74 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: scale(0.9);
+    animation: modalShow 0.3s ease-in-out forwards;
 }
 
 .close {
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: 15px;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
+    color: #ff4d4d;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
 }
+
+.close:hover {
+    color: #cc0000;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalShow {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .close {
+        font-size: 20px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .plan-de-estudio-container {
@@ -219,5 +279,141 @@
         font-size: 18px;
         top: 5px;
         right: 10px;
+    }
+}
+
+/* Estilos generales para la sección de años */
+.study-year {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Encabezado del año de estudio */
+.study-year-header {
+    padding: 12px;
+    background-color: #004494;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+    border-radius: 8px;
+}
+
+.study-year-header:hover {
+    background-color: #025aa5;
+}
+
+/* Contenedor de materias */
+.subject-list {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Tarjetas de materias */
+.subject-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.subject-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos y textos */
+.subject-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 8px;
+}
+
+.subject-card p {
+    color: #495057;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+/* Correlativas */
+.subject-correlatives {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las correlativas pasen a una nueva línea si es necesario */
+    gap: 5px; /* Espaciado entre correlativas */
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.correlative-link {
+    color: #0056b3;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background-color: #e9f5ff;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.correlative-link:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .study-year-header {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .subject-list {
+        grid-template-columns: 1fr;
+    }
+
+    .subject-card {
+        padding: 12px;
+    }
+
+    .subject-card h3 {
+        font-size: 1rem;
+    }
+
+    .subject-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .study-year-header {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .subject-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .subject-card p {
+        font-size: 0.85rem;
+    }
+
+    .correlative-link {
+        font-size: 0.85rem;
     }
 }
